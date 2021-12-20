@@ -10,12 +10,10 @@ import Board from'./components/Board/index';
 
 function App() {
   return(
-    <DndProvider backend={HTML5Backend}>
-      <DndProvider backend={TouchBackend}>
+    <DndProvider backend={HTML5Backend} backend={TouchBackend}>
       <Header/>
       <Board/>
       <GlobalStyle/>
-      </DndProvider>
     </DndProvider>
   );
 }
