@@ -2,8 +2,10 @@ import React from "react";
 import { Container } from "../List/style";
 import {MdAdd} from"react-icons/md";
 import Card from"../Card/index"
-export default function List({ data,index: listIndex}){
+export default function List({ data,index: listIndex,list = []}){
+   //ORDENAÇÃO
    
+  //ORDENAÇÃO
     return(
         <Container>
             <header>
@@ -15,7 +17,7 @@ export default function List({ data,index: listIndex}){
                 )}
             </header>
             <ul >
-                <button>teste</button>
+                <button className="order">Ordenar</button>
                 { data.cards.map((card,index)=><Card key={card.id} index={index} listIndex={listIndex} data={card}/>)}
             </ul>
         </Container>

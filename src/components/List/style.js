@@ -29,6 +29,12 @@ export const Container = styled.div`
             border:0;
             cursor:pointer;
         }
+        
+    }
+
+    .order{
+        width:100%;
+        border-radius:5px;
     }
 
     @media screen and (max-width: 720px) {

@@ -15,6 +15,7 @@ function App() {
         <Board />
         <GlobalStyle />
       </DndProvider>
+  
   );
 }
 

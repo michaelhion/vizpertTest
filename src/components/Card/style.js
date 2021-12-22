@@ -19,6 +19,13 @@ export const Container = styled.div`
        line-height:20px;
    }
 
+   img {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    margin-top: 5px;
+  }
+
    ${props => props.isDragging && css`
     border: 2px dashed rgba(0, 0, 0, 0.2);
     padding-top: 31px;
@@ -32,8 +39,9 @@ export const Container = styled.div`
   `}
 `;
 export const Label = styled.span`
-    width:10px;
-    height:10px;
-    border-radius:2px;
-    display:inline-block;
-`
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: ${props => props.color};
+`;

@@ -4,23 +4,8 @@ import BoardContext from '../Board/context';
 import { Container,Label } from "../Card/style";
 
 export default function Card({ data, index,listIndex}){
-  //ORDENAÇÃO
-  /*const [order,setOrder] = useState(1);
-  const [titleOrder,setTitleOrder] = useState('title');
 
-  const handleOrder = titleName =>{
-      setOrder(-order)
-      setTitleOrder(titleName)
-      console.log(order,titleName)
-  };
-  
-  list = list.sort((a,b)=>{
-      return a[titleOrder] < b[titleOrder] ? -order : order;
-  });
-*/
-  //ORDENAÇÃO
-
-  //DRAG AND DROP
+  //DRAG AND DROP start
   const { move } = useContext(BoardContext);
   const ref = useRef();
   const [{ isDragging }, dragRef] = useDrag({
@@ -61,14 +46,17 @@ export default function Card({ data, index,listIndex}){
   });
 
   dragRef(dropRef(ref));
-//DRAG AND DROP
+//DRAG AND DROP end
 
     return (
         <Container ref={ref} isDragging={isDragging}>
             <header>
              {data.labels.map(label =><Label key={label} color="label"/>)}
             </header>
-            <p >{data.content}</p>
+            <p >Livro: {data.content}</p>
+            <p>Ano Publicação: {data.publicationDate}</p>
+            <p>Autor: {data.author}</p>
+            { data.image && <img src={data.image} alt=""/> }
         </Container>
     );
 }
