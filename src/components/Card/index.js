@@ -1,9 +1,26 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useState } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import BoardContext from '../Board/context';
 import { Container,Label } from "../Card/style";
 
-export default function Card({ data, index, listIndex}){
+export default function Card({ data, index,listIndex}){
+  //ORDENAÇÃO
+  /*const [order,setOrder] = useState(1);
+  const [titleOrder,setTitleOrder] = useState('title');
+
+  const handleOrder = titleName =>{
+      setOrder(-order)
+      setTitleOrder(titleName)
+      console.log(order,titleName)
+  };
+  
+  list = list.sort((a,b)=>{
+      return a[titleOrder] < b[titleOrder] ? -order : order;
+  });
+*/
+  //ORDENAÇÃO
+
+  //DRAG AND DROP
   const { move } = useContext(BoardContext);
   const ref = useRef();
   const [{ isDragging }, dragRef] = useDrag({
@@ -44,13 +61,14 @@ export default function Card({ data, index, listIndex}){
   });
 
   dragRef(dropRef(ref));
+//DRAG AND DROP
 
     return (
         <Container ref={ref} isDragging={isDragging}>
             <header>
              {data.labels.map(label =><Label key={label} color="label"/>)}
             </header>
-            <p>{data.content}</p>
+            <p >{data.content}</p>
         </Container>
     );
 }

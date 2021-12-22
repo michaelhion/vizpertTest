@@ -4,7 +4,9 @@ export const Container = styled.div`
     padding:0 15px;
     height:100%;
     flex:0 0 320px;
-
+    background-color:#b3c0e3;
+    margin-left:50px;
+    padding-bottom:25px;
     & + div{
         border-left: 1px solid rgba(0,0,0,0.5)
     }
@@ -28,4 +30,13 @@ export const Container = styled.div`
             cursor:pointer;
         }
     }
+
+    @media screen and (max-width: 720px) {
+        flex-direction:column;
+        margin-bottom:50px;
+        margin-right:50px;
+        padding-bottom:50px;
+        background-color:#b3c0e3;
+    }
+    
 `

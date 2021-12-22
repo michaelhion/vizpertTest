@@ -1,7 +1,7 @@
 export function loadLists() {
     return [
       { 
-        title: 'Livros Que Estou lendo', 
+        title: 'Prateleira 1', 
         creatable: true,
         cards: [
           {
@@ -32,7 +32,7 @@ export function loadLists() {
         ]
       },
       { 
-        title: 'Livros Lidos', 
+        title: 'Prateleira 2', 
         creatable: false,
         cards: [
           {
@@ -40,13 +40,7 @@ export function loadLists() {
             content: 'Ulisses',
             labels: [],
             user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
-          }
-        ]
-      },
-      { 
-        title: 'Livros Que Gostaria de Ler', 
-        creatable: true,
-        cards: [
+          },
           {
             id: 6,
             content: 'A Divina Comédia',
