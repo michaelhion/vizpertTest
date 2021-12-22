@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useState } from 'react';
+import React, { useRef, useContext /*, useState*/ } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import BoardContext from '../Board/context';
 import { Container,Label } from "../Card/style";
