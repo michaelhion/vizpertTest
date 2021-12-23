@@ -9,6 +9,7 @@ import Board from './components/Board/index';
 
 function App() {
   const opt = { enableMouseEvents: true }
+
   return (
       <DndProvider backend={TouchBackend} options={opt}>
         <Header />

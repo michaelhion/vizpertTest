@@ -18,18 +18,21 @@ export const Container = styled.div`
         height:42px;
 
         h2{
+            text-align: center;
             font-weight:500;
             font-size:16px;
             padding: 0 10px;
         }
-        button{
-            width:42px;
-            height:42px;
-            border-radius:18px;
-            border:0;
-            cursor:pointer;
-        }
         
+        
+    }
+    button{
+        width:25px;
+        height:25px;
+        border-radius:18px;
+        border:0;
+        cursor:pointer;
+        margin-bottom:5px;
     }
 
     .order{

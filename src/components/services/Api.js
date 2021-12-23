@@ -1,7 +1,7 @@
 export function loadLists() {
     return [
       { 
-        title: 'Prateleira 1', 
+        title: 'Livros Que Estou Lendo', 
         creatable: true,
         cards: [
           {
@@ -40,8 +40,8 @@ export function loadLists() {
         ]
       },
       { 
-        title: 'Prateleira 2', 
-        creatable: false,
+        title: 'Livros Que Já Li', 
+        creatable: true,
         cards: [
           {
             id: 5,
@@ -69,10 +69,10 @@ export function loadLists() {
           },
           {
             id: 9,
-            content: 'Franz Kafka',
+            content: 'O Processo',
             labels: [],
             publicationDate:'1925',
-            author:' Miguel de Cervantes',
+            author:'Franz Kafka',
             image: 'https://www.revistabula.com/wp/wp-content/uploads/2016/11/O-Processo.jpg.webp',
           }
         ]
