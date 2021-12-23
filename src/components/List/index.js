@@ -27,7 +27,7 @@ export default function List({ data, index: listIndex, list = [] }) {
                 <h2>{data.title}</h2>
 
             </header>
-            <ul >
+            <ul>
                 {data.creatable && (
                     <button type="button">
                         <MdAdd size={24} color="#3471eb" />
