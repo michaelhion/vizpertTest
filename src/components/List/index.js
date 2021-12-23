@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Container } from "../List/style";
 import { MdAdd } from "react-icons/md";
 import Card from "../Card/index";
-export default function List({ data, index: listIndex, list = [] }) {
+export default function List({ data, index: listIndex}) {
     const [state,setState] = useState([]);
     const handleOrder = e => {
         setState (data.cards.sort(function (a, b) {
             return a.content < b.content ? -1 : a.content > b.content ? 1 : 0;
         }))
-        data = setState;
+        data = state;
         console.log(data);
         return(
             data
