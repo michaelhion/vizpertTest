@@ -42,7 +42,6 @@ export default function Card({ data, index,listIndex}){
     move(draggedListIndex,draggedIndex,targetIndex, targetListIndex)
     item.index = targetIndex;
     item.listIndex = targetListIndex;
-    console.log("targetIndex " + targetIndex + "  " + "targetListIndex " + targetListIndex)
     }
   });
 

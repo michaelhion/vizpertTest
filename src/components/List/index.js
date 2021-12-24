@@ -5,13 +5,14 @@ import Card from "../Card/index";
 export default function List({ data, index: listIndex}) {
     //ORDENAÇÃO
     
-    const [state,setState] = useState({});
+    const [state,setState] = useState(data);
     const handleOrder = e => {
         let select = document.getElementById('sortList');
 	    let option = select.options[select.selectedIndex];
         setState (data.cards.sort(function (a, b) {
             return a[option.value] < b[option.value] ? -1 : a[option.value] > b[option.value] ? 1 : 0;
         }))
+        //state(data)
         console.log(setState)
     };
 
