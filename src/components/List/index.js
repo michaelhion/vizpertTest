@@ -3,19 +3,19 @@ import { Container } from "../List/style";
 import { MdAdd } from "react-icons/md";
 import Card from "../Card/index";
 export default function List({ data, index: listIndex}) {
-    const [state,setState] = useState([]);
+    //ORDENAÇÃO
+    
+    const [state,setState] = useState({});
     const handleOrder = e => {
+        let select = document.getElementById('sortList');
+	    let option = select.options[select.selectedIndex];
         setState (data.cards.sort(function (a, b) {
-            return a.content < b.content ? -1 : a.content > b.content ? 1 : 0;
+            return a[option.value] < b[option.value] ? -1 : a[option.value] > b[option.value] ? 1 : 0;
         }))
-        data = state;
-        console.log(data);
-        return(
-            data
-        )
+        console.log(setState)
     };
 
-    //função do youtube 
+     
     //ORDENAÇÃO
     //MODAL
 
@@ -27,6 +27,13 @@ export default function List({ data, index: listIndex}) {
                 <h2>{data.title}</h2>
 
             </header>
+            <select id="sortList">
+                <option defaultValue="default" >Escolha uma opção de Ordenação</option>
+                <option  value="bookName">Nome do Livro</option>
+                <option value="labels">Cor</option>
+                <option value="publicationDate">Ano Publicação</option>
+                <option value="author">Nome do Autor</option>
+            </select>
             <ul>
                 {data.creatable && (
                     <button type="button">

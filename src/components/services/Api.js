@@ -6,15 +6,15 @@ export function loadLists() {
         cards: [
           {
             id: 1,
-            content: 'Dom Quixote',
+            bookName: 'Dom Quixote',
             labels: ['#7159c1'],
             publicationDate: '1605',
-            author:' Miguel de Cervantes',
+            author:'Miguel de Cervantes',
             image: 'https://www.revistabula.com/wp/wp-content/uploads/2016/11/Dom-Quixote.jpg.webp',
           },
           {
             id: 2,
-            content: 'Guerra e Paz',
+            bookName: 'Guerra e Paz',
             labels: ['#7159c1'],
             publicationDate: '1869',
             author:'Liev Tolstói',
@@ -22,7 +22,7 @@ export function loadLists() {
           },
           {
             id: 3,
-            content: 'A Montanha Mágica ',
+            bookName: 'A Montanha Mágica ',
             labels: ['#7159c1'],
             publicationDate: '1924',
             author:'Thomas Mann',
@@ -30,7 +30,7 @@ export function loadLists() {
           },
           {
             id: 4,
-            content: 'Cem anos de Solidão ',
+            bookName: 'Cem anos de Solidão ',
             labels: ['#54e1f7'],
             publicationDate: '1967',
             author:'Gabriel García Márquez',
@@ -45,7 +45,7 @@ export function loadLists() {
         cards: [
           {
             id: 5,
-            content: 'Ulisses',
+            bookName: 'Ulisses',
             labels: [],
             publicationDate: '1922',
             author:'James Joyce',
@@ -53,7 +53,7 @@ export function loadLists() {
           },
           {
             id: 6,
-            content: 'A Divina Comédia',
+            bookName: 'A Divina Comédia',
             labels: ['#7159c1'],
             publicationDate: '1321',
             author:'Dante Alighieri',
@@ -61,7 +61,7 @@ export function loadLists() {
           },
           {
             id: 7,
-            content: 'O Homem sem Qualidades',
+            bookName: 'O Homem sem Qualidades',
             labels: ['#54e1f7'],
             publicationDate: '1930-1943',
             author:'Robert Musil',
@@ -69,7 +69,7 @@ export function loadLists() {
           },
           {
             id: 9,
-            content: 'O Processo',
+            bookName: 'O Processo',
             labels: [],
             publicationDate:'1925',
             author:'Franz Kafka',

@@ -42,6 +42,7 @@ export default function Card({ data, index,listIndex}){
     move(draggedListIndex,draggedIndex,targetIndex, targetListIndex)
     item.index = targetIndex;
     item.listIndex = targetListIndex;
+    console.log("targetIndex " + targetIndex + "  " + "targetListIndex " + targetListIndex)
     }
   });
 
@@ -53,7 +54,7 @@ export default function Card({ data, index,listIndex}){
             <header>
              {data.labels.map(label =><Label key={label} color="label"/>)}
             </header>
-            <p >Livro: {data.content}</p>
+            <p >Livro: {data.bookName}</p>
             <p>Ano Publicação: {data.publicationDate}</p>
             <p>Autor: {data.author}</p>
             { data.image && <img src={data.image} alt=""/> }

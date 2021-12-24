@@ -6,6 +6,8 @@ export const Container = styled.div`
     flex:0 0 320px;
     background-color:#b3c0e3;
     margin-left:50px;
+    margin-top:50px;
+    margin-bottom:50px;
     padding-bottom:25px;
     & + div{
         border-left: 1px solid rgba(0,0,0,0.5)
@@ -38,6 +40,10 @@ export const Container = styled.div`
     .order{
         width:100%;
         border-radius:5px;
+    }
+
+    .sortList{
+        width:100%;
     }
 
     @media screen and (max-width: 720px) {
