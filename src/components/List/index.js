@@ -4,16 +4,27 @@ import { MdAdd } from "react-icons/md";
 import Card from "../Card/index";
 export default function List({ data, index: listIndex}) {
     //ORDENAÇÃO
-    
-    const [state,setState] = useState(data);
-    const handleOrder = e => {
+    const [state,setState] = useState({data});
+    console.log(state)
+    let newData = state; 
+    function organizeList(){
+        console.log("passei aki")
         let select = document.getElementById('sortList');
 	    let option = select.options[select.selectedIndex];
-        setState (data.cards.sort(function (a, b) {
+        newData= data.cards.sort(function (a, b) {
             return a[option.value] < b[option.value] ? -1 : a[option.value] > b[option.value] ? 1 : 0;
-        }))
-        //state(data)
-        console.log(setState)
+        });
+        data = newData
+        newData = [];
+        return newData;
+    }
+    let count = 1
+    const handleOrder = e => {
+        console.log("fui clicado: " + count)
+        count++
+        
+        setState (organizeList());
+        
     };
 
      
@@ -41,7 +52,7 @@ export default function List({ data, index: listIndex}) {
                         <MdAdd size={24} color="#3471eb" />
                     </button>
                 )}
-                <button className="order" onClick={() => handleOrder(data.cards)}>Organize</button>
+                <button className="order" onClick={() => handleOrder()}>Organize</button>
                 <li id="lista">{data.cards.map((card, index) => <Card key={card.id} index={index} listIndex={listIndex} data={card} />)}</li>
             </ul>
         </Container>
